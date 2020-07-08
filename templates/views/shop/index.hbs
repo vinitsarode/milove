@@ -1,0 +1,84 @@
+{{!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<link rel='stylesheet' href='/css/styles.css'/> --}}
+
+{{!-- <div class="container">
+    <div class="well well-sm">
+        <strong>Display</strong>
+        <div class="btn-group">
+            <a href="#" id="list" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th-list">
+                </span>List</a> <a href="#" id="grid" class="btn btn-default btn-sm"><span
+                    class="glyphicon glyphicon-th"></span>Grid</a>
+        </div>
+    </div>
+
+    {{#each products}}
+    <div id="products" class="row list-group">
+        {{#each this}}
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="/inventory/img/{{this._id}}" alt="" />
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        {{this.name}}</h4>
+                    <p class="group inner list-group-item-text">
+                        {{this.description}}</p>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead">
+                                ${{this.price}}</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <a class="btn btn-success" href="/product/{{this._id}}">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    {{/each}}
+</div> --}}
+<div class="main-content">
+    <div class="pdt-category-header">
+        <div class="container">
+            <h1>Accessories</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb p-0 my-0">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item">Essentials</li>
+                    <li class="breadcrumb-item active" aria-current="page">Accessories</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    
+    <div class="container mt-5">
+        {{#each products}}
+        <div id="products">
+            {{#each this}}
+            <div class="row row-cols-2 row-cols-md-4">
+                <div class="col mb-4">
+                    <a class="card-link" href="/product/{{this._id}}">
+                        <div class="card">
+                            <img src="/inventory/img/{{this._id}}" class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">{{this.name}}</h5>
+                                <p class="card-text pdt-description">{{this.description}}</p>
+                                <div class="pricing d-flex justify-content-start">
+                                    <p class="card-text pdt-price">Rs. {{this.price}}</p>
+                                    <p class="card-text text-muted pdt-mrp">Rs. 399</p>
+                                </div>
+                                <button class="btn btn-block">Add to Cart</button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        {{/each}}
+    </div>
+</div>

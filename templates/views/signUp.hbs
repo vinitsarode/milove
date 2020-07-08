@@ -1,0 +1,44 @@
+{{!-- <div class="main-content">
+  
+  <p>Enter the following</p>
+
+  <form action="/users" method="POST">
+    <input type="text" name="name" placeholder="Name">
+    <input type="text" name="email" placeholder="Email">
+    <input type="text" name="address" placeholder="address">
+    <input type="text" name="contactNo" placeholder="contact number">
+    <input type="password" name="password" placeholder="Password">
+    <button type="submit">Create</button>
+  </form>
+
+</div> --}}
+
+<div class="container">
+  <div class="row signup-header mx-auto">
+    <div class="content d-flex flex-column align-items-center">
+      <img id = "signup-header-img" class="img-fluid" src="https://i.imgur.com/jgEuVn7.png?1" alt="">
+      <p class="lead" id="signup-tagline">From Wags to Riches!</p>
+    </div>
+  </div>
+
+  <div class="signup-content mx-auto rounded px-5 py-4 mb-5">
+    <h1 id="register-title">Register</h1>
+    <form action="/users" method="POST">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+          <input type="text" name="name" class="form-control" id="name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" name="email" class="form-control" id="email">
+      </div>
+      <div class="form-group">
+        <div class="d-flex justify-content-between">
+          <label for="exampleInputPassword1">Password</label><i toggle="#password-field" class="far fa-eye toggle-password"></i>
+              </div>
+              <input type="password" name="password" class="form-control" id="password-field">
+            </div>  
+              <button type="submit" class="btn btn-lg btn-block login-button">REGISTER</button>
+    </form>
+  </div>
+</div>
